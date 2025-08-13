@@ -114,12 +114,3 @@ Each location includes:
 ## 🤝 Contributing
 
 This project was developed for the MUJ UniWay Hackathon. Future contributions will be considered for the full-scale implementation.
-
-## 📄 License
-
-This project is developed for educational purposes as part of the MUJ UniWay Hackathon 2025.
-
-
-**Last Updated**: August 13, 2025  
-**Version**: 1.0.0  
-**Status**: Phase 1 Complete ✅
