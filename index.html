@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUJ UniWay - Campus Navigation</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">🎓 MUJ UniWay</div>
+            <div class="subtitle">Your Digital Campus Navigation Guide</div>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="search-section">
+                    <h3 class="category-title">🔍 Find Location</h3>
+                    <input type="text" id="searchInput" class="search-box"
+                        placeholder="Search for buildings, departments, facilities...">
+                    <button class="search-btn" onclick="searchLocation()">Search</button>
+                </div>
+
+                <div class="categories">
+                    <h3 class="category-title">📍 Categories</h3>
+                    <div class="category-list">
+                        <div class="category-btn active" onclick="filterCategory('all')">All</div>
+                        <div class="category-btn" onclick="filterCategory('academic')">Academic</div>
+                        <div class="category-btn" onclick="filterCategory('hostels')">Hostels</div>
+                        <div class="category-btn" onclick="filterCategory('dining')">Dining</div>
+                        <div class="category-btn" onclick="filterCategory('admin')">Admin</div>
+                        <div class="category-btn" onclick="filterCategory('recreation')">Recreation</div>
+                    </div>
+                    <div id="locationList" class="location-list"></div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h3 style="margin-bottom: 15px;">🗺️ Interactive Campus Map</h3>
+                <div class="map" id="campusMap">
+                    <!-- Campus areas will be dynamically added here -->
+                </div>
+
+                <div id="routeControls" class="route-controls">
+                    <div class="route-info">
+                        <span id="routeInfo">Route: <strong id="routeDetails"></strong></span>
+                        <button class="clear-route-btn" onclick="clearRoute()">Clear Route</button>
+                    </div>
+                </div>
+
+                <div class="legend">
+                    <h4 style="margin-bottom: 10px;">Legend</h4>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: rgba(102, 126, 234, 0.3);"></div>
+                        <span>Buildings & Facilities</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: rgba(255, 193, 7, 0.6);"></div>
+                        <span>Selected Location</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: linear-gradient(90deg, #ff6b6b, #4ecdc4);"></div>
+                        <span>Navigation Route</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <div class="status-item">
+                <div class="status-number" id="totalLocations">0</div>
+                <div class="status-label">Total Locations</div>
+            </div>
+            <div class="status-item">
+                <div class="status-number" id="openFacilities">0</div>
+                <div class="status-label">Open Now</div>
+            </div>
+            <div class="status-item">
+                <div class="status-number" id="closedFacilities">0</div>
+                <div class="status-label">Closed</div>
+            </div>
+            <div class="status-item">
+                <div class="status-number" id="maintenanceFacilities">0</div>
+                <div class="status-label">Under Maintenance</div>
+            </div>
+        </div>
+
+        <div id="infoPopup" class="info-popup">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            <div class="popup-title" id="popupTitle"></div>
+            <div class="popup-details" id="popupDetails"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
