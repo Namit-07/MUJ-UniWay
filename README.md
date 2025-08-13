@@ -108,8 +108,8 @@ Each location includes:
 
 ## 👥 Team Information
 
-**Team Name**: Forgot :) 
-**Members**: Namit, Suhaan  
+- **Team Name**: Forgot :) 
+- **Members**: Namit, Suhaan  
 
 ## 🤝 Contributing
 
